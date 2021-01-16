@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ol,
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        html {
+            overflow-x: hidden;
+            -webkit-text-size-adjust: none;
+            height: 100%;
+        }
+
+        body {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            background-color: #F2F2F2;
+            margin: 0;
+            display: flex;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1;
+        }
+
+        .main {
+            flex-grow: 1;
+            max-width: 769px;
+            padding: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+        }
+
+        .ans { display: none; }
+
+        .ans.open { display: block; }
+
+        .li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #DDDDDD;
+        }
+        
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <h3>Hot question</h3>
+    <ul>
+        <li class="li">
+            <div class="que">Q: XXXXXXXXXXXX?</div>
+            <div class="ans">XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        </li>
+        <li class="li">
+            <div class="que">Q: XXXXXXXXXXXX?</div>
+            <div class="ans">XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        </li>
+        <li class="li">
+            <div class="que">Q: XXXXXXXXXXXX?</div>
+            <div class="ans">XXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        </li>
+    </ul>
+</div>
+
+<script>
+(function(){
+
+    var list = document.querySelectorAll('.li');
+    // console.log(list)
+    
+    function toggleDisplay(el) {
+        console.log(el.style.display)
+    }
+
+    for (let i = 0; i < list.length; i++) {
+        const li = list[i];
+        li.addEventListener('click', function(){
+            const ansEl = li.getElementsByClassName('ans')[0];
+            // console.log()
+            toggleDisplay(ansEl)
+        })
+        
+    }
+
+})()
+</script>
+</body>
+</html>
