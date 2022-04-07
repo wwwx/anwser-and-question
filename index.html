@@ -1,75 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    html{overflow-x:hidden;-webkit-text-size-adjust:none;min-height:100%;}body{-webkit-tap-highlight-color:rgba(0,0,0,0);background-color:#F2F2F2;margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;}p{line-height:1.5;}.main{min-height:100vh;max-width:769px;padding:1rem;margin-left:auto;margin-right:auto;background-color:white;}button.accordion{background-color:#eee;color:#444;cursor:pointer;padding:18px;width:100%;border:none;text-align:left;outline:none;font-size:15px;transition:0.4s;position:relative;}button.accordion.active,button.accordion:hover{background-color:#ddd;}div.panel{padding:0 18px;background-color:white;max-height:0;overflow:hidden;transition:max-height 0.2s ease-out;}button.accordion:after{content:'\002B';color:#777;font-weight:bold;margin-left:5px;position:absolute;right:15px;top:19px;}button.accordion.active:after{content:"\2212";}
-    </style>
-</head>
-<body>
-<div class="main">
-    <h3 class="title">Frequently Asked Questions</h3>
-    <button class="accordion">1. Can I trust Tingo  with my data?
-    </button>
-    <div class="panel">
-     <p>We use world-class data security and encryption techniques to protect the data you share with us. Tingo  never shares your information with third parties unless it is for dedicated business purposes, such as reporting defaulted loans to authorized credit bureaus.
-    </p>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Faq - Nicenaira</title>
+        <link rel="stylesheet" href="./assets/font/iconfont.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="header">
+            <img src="./assets/image/faq.png" alt="" />
+        </div>
+        <div class="main">
+            <button class="accordion">
+                <span class="accordion__title">
+                    <i class="accordion__number">Q1</i>Can I trust Tingo with my
+                    data?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>
+                    We use world-class data security and encryption techniques
+                    to protect the data you share with us. Tingo never shares
+                    your information with third parties unless it is for
+                    dedicated business purposes, such as reporting defaulted
+                    loans to authorized credit bureaus.
+                </p>
+            </div>
 
-    <button class="accordion">2. How do I give permissions to Tingo  on my phone?
-    </button>
-    <div class="panel">
-       <p>In your Android Phone, kindly go to Settings > Apps > Tingo  > Permissions and make sure that you have enabled Tingo to access everything requested.
-    </p>
-    </div>
+            <button class="accordion">
+                <span class="accordion__title">
+                    <i class="accordion__number">Q2</i>How do I give permissions
+                    to Tingo on my phone?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>
+                    In your Android Phone, kindly go to Settings > Apps > Tingo
+                    > Permissions and make sure that you have enabled Tingo to
+                    access everything requested.
+                </p>
+            </div>
 
-    <button class="accordion">3. How much can I borrow??
-    </button>
-    <div class="panel">
-       <p>Currently our loan sizes range from ₦2,000 to ₦30,000. If you repay loans as scheduled, the amount that you can borrow will increase.
-    </p>
-    </div>
+            <button class="accordion">
+                <span class="accordion__title"
+                    ><i class="accordion__number">Q3</i>How much can I borrow?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>
+                    Currently our loan sizes range from ₦2,000 to ₦30,000. If
+                    you repay loans as scheduled, the amount that you can borrow
+                    will increase.
+                </p>
+            </div>
 
-    <button class="accordion">4. How long does the application process take?
-    </button>
-    <div class="panel">
-       <p>It will take a few minutes.
-    </p>
-    </div>
+            <button class="accordion">
+                <span class="accordion__title">
+                    <i class="accordion__number">Q4</i>How long does the
+                    application process take?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>It will take a few minutes.</p>
+            </div>
 
-    <button class="accordion">5. Why was I rejected for a loan?
-    </button>
-    <div class="panel">
-       <p>If you don’t get accepted when you apply, don’t worry! Sometimes it may take several attempts to qualify for a loan. We encourage you to continue saving data on your phone and to reapply after the period stipulated.
-    </p>
-    </div>
+            <button class="accordion">
+                <span class="accordion__title">
+                    <i class="accordion__number">Q5</i>Why was I rejected for a
+                    loan?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>
+                    If you don’t get accepted when you apply, don’t worry!
+                    Sometimes it may take several attempts to qualify for a
+                    loan. We encourage you to continue saving data on your phone
+                    and to reapply after the period stipulated.
+                </p>
+            </div>
 
-    <button class="accordion">6. What will happen if I pay my loan late?
-    </button>
-    <div class="panel">
-       <p>Late loan repayments automatically incur a fee of 2% per day. It is therefore advised that one does not exceed the due date. Repay the loan by its due date allows you to access larger loan sizes. Late repayments will affect your ability to get subsequent or larger loans. If you are very late on your payments, we report to the Credit Reference Bureau. Blacklisting by the Credit Reference Bureau may affect your ability to borrow from other lenders.
-    </p>
-    </div>
+            <button class="accordion">
+                <span class="accordion__title">
+                    <i class="accordion__number">Q6</i>What will happen if I pay
+                    my loan late?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>
+                    Late loan repayments automatically incur a fee of 2% per
+                    day. It is therefore advised that one does not exceed the
+                    due date. Repay the loan by its due date allows you to
+                    access larger loan sizes. Late repayments will affect your
+                    ability to get subsequent or larger loans. If you are very
+                    late on your payments, we report to the Credit Reference
+                    Bureau. Blacklisting by the Credit Reference Bureau may
+                    affect your ability to borrow from other lenders.
+                </p>
+            </div>
 
-    <button class="accordion">7. Can I request to repay my loan at a later date?
-    </button>
-    <div class="panel">
-       <p>Unfortunately, Tingo  cannot alter your repayment plan after you’ve received a loan. If you are unable to repay the full amount due, we advise you to start making partial repayments as soon as possible.
-    </p>
-    </div>
+            <button class="accordion">
+                <span class="accordion__title">
+                    <i class="accordion__number">Q7</i>Can I request to repay my
+                    loan at a later date?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>
+                    Unfortunately, Tingo cannot alter your repayment plan after
+                    you’ve received a loan. If you are unable to repay the full
+                    amount due, we advise you to start making partial repayments
+                    as soon as possible.
+                </p>
+            </div>
 
-    <button class="accordion">8. How can I increase my chance of being accepted?
-    </button>
-    <div class="panel">
-       <p>Tingo uses data from your phone as well as other sources to make a lending decision. To increase your chances of approval, please make sure to save the data on your phone, keep good credit with all other lenders, and correctly input your account details.
-    </p>
-    </div>
-</div>
+            <button class="accordion">
+                <span class="accordion__title">
+                    <i class="accordion__number">Q8</i>How can I increase my
+                    chance of being accepted?
+                </span>
+                <span class="accordion__rotate">
+                    <i class="iconfont icon-arrow-right"></i>
+                </span>
+            </button>
+            <div class="panel">
+                <p>
+                    Tingo uses data from your phone as well as other sources to
+                    make a lending decision. To increase your chances of
+                    approval, please make sure to save the data on your phone,
+                    keep good credit with all other lenders, and correctly input
+                    your account details.
+                </p>
+            </div>
+        </div>
 
-<script>
- !function(){for(var t=document.getElementsByClassName("accordion"),e=0,i=t.length;e<i;e++)t[e].onclick=function(){this.classList.toggle("active");var t=this.nextElementSibling;t.style.maxHeight?t.style.maxHeight="":t.style.maxHeight=t.scrollHeight+"px"}}();
-</script>
-</body>
+        <script>
+            !(function () {
+                for (
+                    var t = document.getElementsByClassName("accordion"),
+                        e = 0,
+                        i = t.length;
+                    e < i;
+                    e++
+                )
+                    t[e].onclick = function () {
+                        this.classList.toggle("active");
+                        var t = this.nextElementSibling;
+                        t.style.maxHeight
+                            ? (t.style.maxHeight = "")
+                            : (t.style.maxHeight = t.scrollHeight + "px");
+                    };
+            })();
+        </script>
+    </body>
 </html>
