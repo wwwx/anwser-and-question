@@ -1,0 +1,25 @@
+<assembly>
+    <!--名字  会附加在版本后面-->
+    <id>font</id>
+    <formats>
+        <!--打包格式-->
+        <format>tar.gz</format>
+    </formats>
+    <!--如果为false，不会额外产生根目录，否则，在tar.gz包中会产生以pom.xml中artifactId和version命名的根目录-->
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <!--指定哪些文件包含在打出的tar.gz包中-->
+    <!--assembly中两个fileSets的作用是，将target/classes下的文件，打包到AlarmReport目录；将startup.sh打包到AlarmReport/bin目录-->
+    <fileSets>
+        <!-- 把项目相关的说明文件，打包进zip文件的根目录 -->
+        <fileSet>
+            <directory>${project.basedir}/../dist</directory>
+            <outputDirectory>/</outputDirectory>
+            <!-- 排除jenkins文件夹 -->
+            <!--
+            <excludes>
+                <exclude>/jenkins/**</exclude>
+            </excludes>
+            -->
+        </fileSet>
+    </fileSets>
+</assembly>

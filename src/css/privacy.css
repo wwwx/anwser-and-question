@@ -1,0 +1,41 @@
+main,
+main > div {
+  position: relative;
+}
+
+main:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 595px;
+  z-index: -1;
+}
+
+main h3 {
+  font-size: 24px;
+  color: #333333;
+  margin-top: 1.8em;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+main p {
+  font-size: 16px;
+  color: #666666;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+main ul {
+  padding-left: 1em;
+  list-style-type: disc;
+}
+
+main a.emphasize {
+  text-decoration: underline;
+  color: var(--primary);
+}

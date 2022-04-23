@@ -1,0 +1,108 @@
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  min-height: 100%;
+}
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #f2f2f2;
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  line-height: 1.5;
+}
+.header {
+  margin: 0 auto;
+  margin-top: 2rem;
+  text-align: center;
+}
+.header img {
+  width: 50%;
+  max-width: 280px;
+}
+.container {
+  max-width: 769px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.main {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 6px rgba(210, 210, 210, 0.3);
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+  cursor: pointer;
+  padding: 1rem 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.875rem;
+  transition: 0.4s;
+  background: none;
+}
+
+.accordion__title {
+  text-indent: -1.4rem;
+  padding-left: 1.2rem;
+}
+.accordion__number {
+  background-color: orange;
+  padding: 0 1px;
+  color: white;
+  font-style: normal;
+  font-size: 0.625rem;
+  font-weight: 300;
+  margin-right: 0.4rem;
+  position: relative;
+}
+.accordion__number::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  background-image: linear-gradient(135deg, orange 0, orange 50%, transparent 50%, transparent 100%);
+}
+
+.accordion__rotate {
+  transition: 0.3s;
+}
+.accordion__rotate i {
+  font-size: 0.875rem;
+}
+
+.accordion.active .accordion__rotate {
+  transform: rotate(90deg);
+}
+
+.panel {
+  padding: 0 1rem;
+  background-color: white;
+  border-bottom: 1px solid rgba(210, 210, 210, 0.3);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: 0.75rem;
+}
+
+.panel > p {
+  margin-top: 0;
+  color: rgba(110, 110, 110, 0.9);
+}

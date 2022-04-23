@@ -1,0 +1,24 @@
+def groupId = 'com.niwodai.nga-web'
+node(){
+    stage('Get code') {
+        checkout scm
+    }
+    stage('node build') {
+        sh 'chmod +x jenkins/build.sh;./jenkins/build.sh'
+    }
+    //指定打包参数
+//    def (name, version) = getJson()
+    stage('maven build') {
+        //运行maven命令对工程进行打包编译,必须要跳过编译测试用例
+        //sh '/home/nwd/apache-maven-3.0.5/bin/mvn -f    一测的机器找不到mvn  要改为/home……匹配查找
+        sh '/home/nwd/apache-maven-3.0.5/bin/mvn -f jenkins/pom.xml clean deploy -Dmaven.test.skip=true -Duser.project.groupId='+groupId+' -Duser.project.artifactId="nga-front-quark" -Duser.project.version="1.0.0"'
+    }
+}
+
+def getJson() {
+  //获取编译版本
+  def file = readFile 'package.json'
+  def jsonSlurper = new groovy.json.JsonSlurper()
+  def json = jsonSlurper.parseText(file)
+  return [json.name, json.version]
+}
